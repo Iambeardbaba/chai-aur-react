@@ -8,10 +8,18 @@ const RightContent = (props) => {
   return (
     <div
       id="right"
-      className="h-full p-6 w-2/3 flex flex-nowrap overflow-x-auto gap-10"
+      className="h-full p-6 w-2/3 flex flex-nowrap overflow-x-auto gap-10 scroll-smooth animate-slideInRight"
     >
       {props.users.map(function (elem, idx) {
-        return <RightCard key={idx} id={idx} img={elem.img} tag={elem.tag} />;
+        return (
+          <RightCard 
+            key={idx} 
+            id={idx} 
+            img={elem.img} 
+            tag={elem.tag}
+            staggerClass={`stagger-${idx + 1}`}
+          />
+        );
       })}
     </div>
   );
