@@ -17,7 +17,7 @@ const App = () => {
       .then((res) => {
         setImages(res.data);
         setLoading(false);
-        // console.log(images);
+        //console.log(images);
       })
       .catch((err) => {
         if (axios.isCancel(err)) {
@@ -32,16 +32,13 @@ const App = () => {
   useEffect(() => {
     const activeThumbnail = thumbnailRefs.current[currentIndex];
     if (activeThumbnail) {
-      activeThumbnail.scrollIntoView(
-        {
-          behavior: "smooth",
-          block: "nearest",
-          inline: "center",
-        },
-        [currentIndex],
-      );
+      activeThumbnail.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center",
+      });
     }
-  });
+  }, [currentIndex]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
