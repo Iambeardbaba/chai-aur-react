@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Counter</title>
+    <style>
+      html,
+      body {
+        font-family: "Gilroy", sans-serif;
+        background-color: rgb(6, 67, 67);
+        height: 100%;
+        margin: 0;
+      }
+      /* Optimized: Target the tag directly instead of a class */
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .box1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 20px;
+        color: white; /* Added this because black text on dark green is hard to read */
+      }
+      .userinput {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        width: 200px;
+      }
+    </style>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="box1">
+        <input
+          class="userinput"
+          type="text"
+          maxlength="20"
+          placeholder="Write anything"
+          aria-label="Text Input"
+        />
+
+        <h1>Total Characters left: <span>20</span></h1>
+      </div>
+    </main>
+  </body>
+</html>

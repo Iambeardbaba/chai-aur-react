@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      .bigone {
+        width: 80%;
+        height: 80%;
+        background-color: aqua;
+      }
+      .middleone {
+        width: 80%;
+        height: 80%;
+        background-color: rgb(76, 33, 144);
+      }
+      .smallone {
+        width: 80%;
+        height: 80%;
+        background-color: rgb(165, 40, 105);
+      }
+      .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="bigone">
+        <div class="middleone">
+          <div class="smallone">
+            <button class="btn">Click Me</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.514);
+        color: white;
+        margin: 0px;
+      }
+      .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      .outsidebox {
+        width: 300px;
+        height: 30px;
+        background-color: white;
+        border-radius: 50px;
+        padding: 4px;
+        box-sizing: border-box;
+        box-shadow: 0 4px 10px rgba(114, 28, 28, 0.3);
+        margin-bottom: 15px;
+      }
+      .bar {
+        width: 0%;
+        height: 100%;
+        background: linear-gradient(90deg, #0b5858, #1abc9c);
+        border-radius: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Progress bar</h1>
+      <div class="outsidebox">
+        <div class="bar"></div>
+      </div>
+      <div>Downloaded <span>0</span>%</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

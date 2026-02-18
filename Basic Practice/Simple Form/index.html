@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile Generator</title>
+    <style>
+      /* 1. CSS Variables for easy theming */
+      :root {
+        --bg-color: rgb(11, 128, 105);
+        --card-bg: rgba(120, 176, 7, 0.38);
+        --primary-btn: rgb(16, 36, 220);
+        --text-light: bisque;
+        --border-radius: 8px;
+        --font-main: Verdana, Geneva, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      } /* 2. Better Box Model */
+
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        min-height: 100dvh; /* 3. Dynamic Viewport Height */
+        background-color: var(--bg-color);
+        font-family: var(--font-main);
+      }
+
+      #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 2rem;
+      }
+
+      .profile-form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .input-field {
+        padding: 10px;
+        border-radius: var(--border-radius);
+        border: 1px solid #ccc;
+        width: 100%;
+      }
+
+      textarea.input-field {
+        height: 100px;
+        resize: vertical; /* 4. Better UX for textareas */
+      }
+
+      .submit-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: bold;
+        background-color: var(--primary-btn);
+        border-radius: var(--border-radius);
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: opacity 0.2s;
+      }
+
+      .submit-btn:hover {
+        opacity: 0.9;
+      }
+      .submit-btn:focus-visible {
+        outline: 3px solid white;
+      } /* 5. A11y Focus state */
+
+      .displayCard {
+        display: none;
+        width: 100%;
+        max-width: 320px;
+        padding: 10px;
+        background-color: var(--card-bg);
+        border-radius: var(--border-radius);
+        color: var(--text-light);
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .profile-img {
+        width: 120px; /* 6. Fixed dimensions to prevent layout shift */
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 0.125rem;
+      }
+
+      .displayName {
+        margin: 0.15rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="main">
+      <form class="profile-form">
+        <label for="name" class="visually-hidden">Name</label>
+        <input
+          id="name"
+          class="input-field"
+          type="text"
+          placeholder="Full Name"
+          required
+        />
+
+        <label for="occ" class="visually-hidden">Occupation</label>
+        <input
+          id="occ"
+          class="input-field"
+          type="text"
+          placeholder="Occupation"
+          required
+        />
+
+        <label for="pic" class="visually-hidden">Profile Pic URL</label>
+        <input
+          id="pic"
+          class="input-field"
+          type="url"
+          placeholder="Profile Pic URL"
+        />
+
+        <label for="info" class="visually-hidden">Info</label>
+        <textarea
+          id="info"
+          class="input-field"
+          placeholder="Tell us about yourself..."
+        ></textarea>
+
+        <button type="submit" class="submit-btn">Generate Profile</button>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
